@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+    {% if sent %}
+        <p>Письмо успешно отправленно</p>
+    
+    {% else %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type = "submit", value = "Подтвердить">
+
+    </form>
+
+    {% endif %}
+
+{% endblock content %}

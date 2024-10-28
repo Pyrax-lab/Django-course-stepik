@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load blog_tags %}
+{% load static %}
+
+
+
+{% block content %}
+    
+
+    <div class = "content_in">
+
+        <p>Всего постов {% total_posts %}</p>
+        <form action="" method="GET">
+            {{form.as_p}}
+            <input class="button_search" type="submit" value="Поск">
+        </form>
+        
+        
+
+        {% if tag %}
+            <h2>Пост с тегом {{tag.name}}</h2>
+        {% endif %}
+
+    {% for i in post %}
+        <a href="{{ i.get_absolute_url }}"><h2>{{i.title}}</h2></a>
+
+
+        <p class="tags">
+            Теги:
+            {% for tag in i.tags.all %}
+                <a href = "{% url "blog:post_list_by_tag" tag.slug %}">{{tag.name}}</a>
+            {% endfor %}
+        </p>
+
+
+        
+        <br>
+        <p>{{i.body|markdown}}</p> <!--markdown фильтр-->    
+    {% endfor %}
+
+    </div>
+
+    <div class ="paginator">
+
+        {% if post.has_previous %}
+            <a href = "?page={{post.previous_page_number}}"><span>Назад </span></a>
+        {% else %}
+            <span>Назад </span>
+        {% endif %}
+        
+        <span>{{post.number}} из {{post.paginator.num_pages}} </span>
+
+        {% if post.has_next %}
+            <a href = "?page={{post.next_page_number}}"><span>Вперёд</span></a>
+        {% else %}
+            <span>Вперёд</span>
+        {% endif %}
+
+        
+
+        <p>Самые обсуждаеммые посты</p>
+
+        {% most_comments_posts as coments_post %}
+        {% for i in coments_post %}
+            <a href="{{i.get_absolute_url}}"><p>{{i.title}}</p></a>
+        {% endfor %}
+
+    </div>  
+
+{% endblock content %}

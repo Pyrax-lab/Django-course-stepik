@@ -1,0 +1,1299 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-10-18T20:00:21.447Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Джанго",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-10-18T20:00:34.111Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Джанго",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-10-18T20:00:50.502Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "YouTube",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-10-18T20:01:04.696Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "AdSense",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-10-19T13:45:18.567Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "PostgreSQL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-10-19T13:45:37.522Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "SQL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-10-19T13:46:01.696Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "База данных",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-10-21T15:46:18.826Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "База данных",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-10-21T15:57:21.386Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "YouTube",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-10-21T15:57:29.308Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "SQL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-10-21T15:57:44.455Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "PostgreSQL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-10-21T15:58:03.664Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "PostgreSQL",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-10-21T15:58:22.367Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Джанго",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-10-22T17:11:53.056Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Nvidia 5090 RTX 8 GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 7,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 7,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 7,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 7,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add coment",
+    "content_type": 8,
+    "codename": "add_coment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change coment",
+    "content_type": 8,
+    "codename": "change_coment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete coment",
+    "content_type": 8,
+    "codename": "delete_coment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view coment",
+    "content_type": 8,
+    "codename": "view_coment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 9,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 9,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 9,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 9,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add tagged item",
+    "content_type": 10,
+    "codename": "add_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change tagged item",
+    "content_type": 10,
+    "codename": "change_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete tagged item",
+    "content_type": 10,
+    "codename": "delete_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view tagged item",
+    "content_type": 10,
+    "codename": "view_taggeditem"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$X2uIX1rL8XMR9LNPqUYlEL$ys/lWdPxRMRmPs3X/7kOlIf9MzypnloU08N806/OcwQ=",
+    "last_login": "2024-10-15T14:24:13.256Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-15T14:23:53.978Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "blog",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "blog",
+    "model": "coment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "taggit",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "taggit",
+    "model": "taggeditem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7428fjszo5iju8kqfx5dylifublsjvq0",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OoO4dO83kBmgUjWQlHZl_HdD0oVu7znnvkWgfSth73kNSxIXocXpd2OKz1wHSA-q9yZjq9u6sByKPGiXt5by63q4fweFehm1UgaRmcB4BSknOyNlsNY4z5YcZA-aWKNVPkVDyBq8g2k642zYs_h8Adf6N2w:1t0iT7:NT4Wt41XpUOfBTvtl-eYQQFvZSqOn0UgMAFBbeM9HfE",
+    "expire_date": "2024-10-29T14:24:13.490Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Джанго",
+    "body": "Django\r\nМатериал из Википедии — свободной энциклопедии\r\nТекущая версия страницы пока не проверялась опытными участниками и может значительно отличаться от версии, проверенной 22 января 2024 года; проверки требуют 11 правок.\r\nDjango\r\nЛоготип программы Django\r\nСкриншот программы Django\r\nТип\tвеб-фреймворк\r\nАвторы\tAdrian Holovaty, Simon Willison\r\nРазработчик\tDjango Software Foundation[1]\r\nНаписана на\tPython[1]\r\nИнтерфейс\tвеб-интерфейс\r\nОперационная система\tкроссплатформенность\r\nПервый выпуск\t21 июля 2005; 19 лет назад[2]\r\nПоследняя версия\t\r\n5.1.1 (3 сентября 2024)[3]\r\nРепозиторий\tgithub.com/django/django\r\nСостояние\tВ активном развитии\r\nЛицензия\t3-clause BSD[4]\r\nСайт\tdjangoproject.com (англ.)\r\nЛоготип Викисклада Медиафайлы на Викискладе\r\nDjango (Джанго, ['dʒæŋɡoʊ][5]) — свободный фреймворк для веб-приложений на языке Python, использующий шаблон проектирования MVC[6]. Проект поддерживается организацией Django Software Foundation.\r\n\r\nСайт на Django строится из одного или нескольких приложений, которые рекомендуется делать отчуждаемыми и подключаемыми. Это одно из существенных архитектурных отличий этого фреймворка от некоторых других (например, Ruby on Rails). Один из основных принципов фреймворка — DRY (англ. Don't repeat yourself)\r\n\r\nТакже, в отличие от других фреймворков, обработчики URL в Django конфигурируются явно при помощи регулярных выражений.\r\n\r\nДля работы с базой данных Django использует собственный ORM, в котором модель данных описывается классами Python, и по ней генерируется схема базы данных.[7]\r\n\r\n\r\nСодержание\r\n1\tИспользование\r\n2\tРазработчики\r\n3\tАрхитектура\r\n4\tВозможности\r\n5\tВерсии и хронология их выхода\r\n6\tРешения\r\n7\tКонфигурация сервера\r\n8\tХостинг для Django\r\n8.1\tDjango на хостинге Google\r\n9\tПримечания\r\n10\tЛитература\r\n11\tСсылки\r\nИспользование\r\nВеб-фреймворк Django используется в сайтах Instagram[8], Disqus[9], Mozilla[10], The Washington Times, Pinterest, YouTube, Google и др.\r\n\r\nТакже Django используется в качестве веб-компонента в проектах:\r\n\r\nGraphite[11] — система построения графиков и наблюдения\r\nFreeNAS — свободная реализация системы хранения и обмена файлами и др.",
+    "auth": 1,
+    "publish": "2024-10-18T19:59:43Z",
+    "slug": "dzhango",
+    "created": "2024-10-18T20:00:21.009Z",
+    "update": "2024-10-21T15:58:22.367Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "YouTube",
+    "body": "YouTube (МФА: [ˈjuːt(j)uːb][8], юту́б[9], ютью́б[9]) — американский видеохостинг, основанный в 2005 году. С октября 2006 года принадлежит компании Google. YouTube стал популярнейшим видеохостингом и вторым сайтом в мире по количеству посетителей[10]. На 2020 год у него более 2,5 млрд ежемесячных пользователей, которые ежедневно просматривают более 1 млрд часов видео[11]. На 2021 год на сервисе насчитывалось, в общей сложности, около 14 млрд видеороликов.\r\n\r\nБизнес-модель YouTube предполагает доход от рекламы и платного контента. Кроме того, существует платная подписка YouTube Premium для просмотра роликов без рекламы. Видеохостинг интегрирован в AdSense от Google, что позволяет зарабатывать как ему, так и создателям контента. В 2022 году годовой доход YouTube от рекламы составил 29,2 млрд долларов[12].\r\n\r\nСо времени приобретения компанией Google, YouTube вышел за рамки основного сайта и обзавёлся приложениями для мобильных и других платформ. Бо́льшая часть контента на YouTube создаётся пользователями, профессиона",
+    "auth": 1,
+    "publish": "2024-10-18T20:00:34Z",
+    "slug": "youtube",
+    "created": "2024-10-18T20:00:50.502Z",
+    "update": "2024-10-21T15:57:20.965Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "AdSense",
+    "body": "Google AdSense — сервис контекстной рекламы от Google. Программа автоматически размещает на веб-сайтах текстовые и графические объявления, подходящие по контексту. Владельцы сайтов, размещающие рекламу, получают доход за клики (переходы посетителей по рекламным ссылкам) и показы рекламы (Google AdSense для контекста). Стоимость клика по рекламе может варьироваться от нескольких центов до нескольких десятков, а то и сотен долларов (довольно редкие клики). Кроме того, издатели веб-сайтов с помощью AdSense могут предоставлять своим посетителям поиск Google как по Интернету, так и непосредственно по сайту, зарабатывая деньги от объявлений Google (Google AdSense для поиска).\r\n\r\nДанный рекламный сервис особенно важен[источник не указан 2761 день] для обеспечения доходности небольших веб-сайтов, у которых отсутствуют средства для развития собственной системы продажи рекламы.\r\n\r\nС помощью своей интерактивной учётной записи веб-издатель в любое время может просматривать количество запросов, кликов, рейтинг кликов, а также свои текущие доходы от использования AdSense.\r\n\r\nВ 1-м квартале 2011 года на долю AdSense приходилось 28 % доходов Google, что составляло 2,43 млрд долл.[1]\r\n\r\n12 августа 2024 года сервис объявил о полном уходе из России. Все пользовательские экаунты планируется деактивировать, завершить расчеты с пользователями предполагается в течение двух месяцев[2].",
+    "auth": 1,
+    "publish": "2024-10-18T20:00:50Z",
+    "slug": "adsense",
+    "created": "2024-10-18T20:01:04.696Z",
+    "update": "2024-10-18T20:01:04.696Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "PostgreSQL",
+    "body": "PostgreSQL (произносится «Пост-Грес-Кью-Эл»[6]) — свободная объектно-реляционная система управления базами данных (СУБД).\r\n\r\nСуществует в реализациях для множества UNIX-подобных платформ, включая различные BSD-системы, HP-UX, IRIX, Linux, macOS, Solaris/OpenSolaris, Tru64, QNX, а также для Microsoft Windows.\r\n\r\n\r\nСодержание\r\n1\tПоддержка стандартов, возможности, особенности\r\n2\tИстория\r\n3\tОсновные возможности\r\n3.1\tФункции\r\n3.2\tТриггеры\r\n3.3\tПравила и представления\r\n3.4\tИндексы\r\n3.5\tМноговерсионность (MVCC)\r\n3.6\tТипы данных\r\n3.7\tПользовательские объекты\r\n3.8\tНаследование и секционирование\r\n4\tПрочие возможности\r\n5\tКачество исходного кода\r\n6\tПроизводные продукты\r\n6.1\tPostgres Pro\r\n7\tПримечания\r\n8\tСсылки\r\nПоддержка стандартов, возможности, особенности\r\nPostgreSQL базируется на языке SQL и поддерживает многие из возможностей стандарта SQL:2011[7][8] и ряд возможностей SQL:2016 в части работы с данными в формате JSON[9].\r\n\r\nВ PostgreSQL версии 12 есть следующие ограничения[10]:",
+    "auth": 1,
+    "publish": "2024-10-19T13:45:01Z",
+    "slug": "postgresql",
+    "created": "2024-10-19T13:45:18.551Z",
+    "update": "2024-10-21T15:58:03.664Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "SQL",
+    "body": "SQL (аббр. от англ. Structured Query Language — «язык структурированных запросов») — декларативный язык программирования, применяемый для создания, модификации и управления данными в реляционной базе данных, управляемой соответствующей системой управления базами данных.\r\n\r\nЯвляется, прежде всего, информационно-логическим языком, предназначенным для описания, изменения и извлечения данных, хранимых в реляционных базах данных. В общем случае SQL (без ряда современных расширений) считается языком программирования неполным по Тьюрингу, но вместе с тем стандарт языка спецификацией SQL/PSM предусматривает возможность его процедурных расширений.\r\n\r\nИзначально SQL был основным способом работы пользователя с базой данных и позволял выполнять следующий набор операций:\r\n\r\nсоздание в базе данных новой таблицы;\r\nдобавление в таблицу новых записей;\r\nизменение записей;\r\nудаление записей;\r\nвыборка записей из одной или нескольких таблиц (в соответствии с заданным условием);\r\nизменение структур таблиц.\r\nСо временем SQL усложнился — обогатился новыми конструкциями, обеспечил возможность описания и управления новыми хранимыми объектами (например, индексы, представления, триггеры и хранимые процедуры) — и стал приобретать черты, свойственные языкам программирования.\r\n\r\nПри всех своих изменениях SQL остаётся самым распространённым лингвистическим средством для взаимодействия прикладного программного обеспечения с базами данных. В то же время современные СУБД, а также информационные системы, использующие СУБД, предоставляют пользователю развитые средства визуального построения запросов.",
+    "auth": 1,
+    "publish": "2024-10-19T13:45:18Z",
+    "slug": "sql",
+    "created": "2024-10-19T13:45:37.506Z",
+    "update": "2024-10-21T15:57:29.293Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "База данных",
+    "body": "Ба́за да́нных — совокупность данных, хранимых в соответствии со схемой данных, манипулирование которыми выполняют в соответствии с правилами средств моделирования данных[1][2][3].\r\n\r\nМногие специалисты указывают на распространённую ошибку, состоящую в некорректном использовании термина «база данных» вместо термина «система управления базами данных», и указывают на необходимость различения этих понятий[4].\r\n\r\n\r\nСодержание\r\n1\tПроблемы определения\r\n2\tИстория\r\n3\tВиды баз данных\r\n4\tСверхбольшие базы данных\r\n5\tСм. также\r\n6\tПримечания\r\n7\tЛитература\r\n8\tСсылки\r\nПроблемы определения\r\nВ литературе предлагается множество определений понятия «база данных», отражающих скорее субъективное мнение тех или иных авторов, однако общепризнанная единая формулировка отсутствует.\r\n\r\nОпределения из нормативных документов, в том числе стандартов:\r\n\r\nБаза данных — представленная в объективной форме совокупность самостоятельных материалов (статей, расчётов, нормативных актов, судебных решений и иных подобных материалов), систематизированных таким образом, чтобы эти материалы могли быть найдены и обработаны с помощью электронной вычислительной машины (ЭВМ)[5]\r\nБаза данных — совокупность данных, организованных в соответствии с концептуальной структурой, описывающей характеристики этих данных и взаимоотношения между ними, которая поддерживает одну или более областей применения[6].\r\nОпределения из авторитетных монографий:\r\n\r\nБаза данных — организованная в соответствии с определёнными правилами и поддерживаемая в памяти компьютера совокупность данных, характеризующая актуальное состояние некоторой предметной области и используемая для удовлетворения информационных потребностей пользователей[7].\r\nБаза данных — некоторый набор перманентных (постоянно хранимых) данных, используемых прикладными программными системами какого-либо предприятия[8].\r\nБаза данных — совместно используемый набор логически связанных данных (и описание этих данных), предназначенный для удовлетворения информационных потребностей организации[9].",
+    "auth": 1,
+    "publish": "2024-10-19T13:45:37Z",
+    "slug": "baza-dannyh",
+    "created": "2024-10-19T13:46:01.271Z",
+    "update": "2024-10-21T15:46:18.811Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Nvidia 5090 RTX 8 GB",
+    "body": "**Видеокарта нового поколения**\r\n1. Лучшая в своём роде\r\n2. Недорогостующия\r\n3. _Классаная_ рецензия\r\n\r\n**_Лучшая видеокарта 50-го поколения_**",
+    "auth": 1,
+    "publish": "2024-10-22T17:09:37Z",
+    "slug": "nvidia-5090-rtx-8-gb",
+    "created": "2024-10-22T17:11:52.603Z",
+    "update": "2024-10-22T17:11:52.603Z",
+    "status": false
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 1,
+  "fields": {
+    "post": 1,
+    "user": 1,
+    "name": "xaker xaker",
+    "email": "proxaker1111@gmail.com",
+    "body": "saaaaaaaa",
+    "created": "2024-10-20T10:51:43.909Z",
+    "update": "2024-10-20T10:51:43.909Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 2,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "ssssssssssssddddddd",
+    "created": "2024-10-20T10:57:55.785Z",
+    "update": "2024-10-20T10:57:55.785Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 3,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "name": "",
+    "email": "sternberg082@gmail.com",
+    "body": "ddddddddddddddddddd",
+    "created": "2024-10-20T10:59:55.278Z",
+    "update": "2024-10-20T10:59:55.278Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 4,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "name": "",
+    "email": "sternberg082@gmail.com",
+    "body": "ssss",
+    "created": "2024-10-20T12:46:42.870Z",
+    "update": "2024-10-20T12:46:42.870Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 5,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "name": "",
+    "email": "sternberg082@gmail.com",
+    "body": "ssss",
+    "created": "2024-10-20T12:47:39.793Z",
+    "update": "2024-10-20T12:47:39.793Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 6,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "name": "",
+    "email": "sternberg082@gmail.com",
+    "body": "ssss",
+    "created": "2024-10-20T12:47:54.604Z",
+    "update": "2024-10-20T12:47:54.604Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 7,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "22",
+    "created": "2024-10-20T13:04:43.282Z",
+    "update": "2024-10-20T13:04:43.282Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 8,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "sternberg082@gmail.com",
+    "body": "ww",
+    "created": "2024-10-20T13:09:07.416Z",
+    "update": "2024-10-20T13:09:07.416Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 9,
+  "fields": {
+    "post": 3,
+    "user": 1,
+    "name": "",
+    "email": "sternberg082@gmail.com",
+    "body": "wwww",
+    "created": "2024-10-20T13:09:43.565Z",
+    "update": "2024-10-20T13:09:43.565Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 10,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "www",
+    "created": "2024-10-20T13:14:52.542Z",
+    "update": "2024-10-20T13:14:52.542Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 11,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "www2",
+    "created": "2024-10-20T13:15:02.500Z",
+    "update": "2024-10-20T13:15:02.500Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 12,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "www2",
+    "created": "2024-10-20T13:15:11.719Z",
+    "update": "2024-10-20T13:15:11.719Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 13,
+  "fields": {
+    "post": 4,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.comww",
+    "body": "hello my poople",
+    "created": "2024-10-20T13:23:09.949Z",
+    "update": "2024-10-20T13:23:09.949Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 14,
+  "fields": {
+    "post": 4,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "что это такое??",
+    "created": "2024-10-20T13:23:32.294Z",
+    "update": "2024-10-20T13:23:32.294Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 15,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "Пост не очень скучный какойто",
+    "created": "2024-10-20T13:25:10.010Z",
+    "update": "2024-10-20T13:25:10.010Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 16,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "Вот такой классный кооментарии я отсавлю сейчас тут для вас чтоб вы видели кто я такой и что зделда на этом сайте немножко интресенго чегото",
+    "created": "2024-10-20T13:46:31.422Z",
+    "update": "2024-10-20T13:46:31.422Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 17,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "Вот такой классный кооментарии я отсавлю сейчас тут для вас чтоб вы видели кто я такой и что зделда на этом сайте немножко интресенго чегото",
+    "created": "2024-10-20T13:46:43.660Z",
+    "update": "2024-10-20T13:46:43.660Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 18,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "Вот такой классный кооментарии я отсавлю сейчас тут для вас чтоб вы видели кто я такой и что зделда на этом сайте немножко интресенго чегото",
+    "created": "2024-10-20T13:47:02.738Z",
+    "update": "2024-10-20T13:47:02.738Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 19,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "ArtiGameDev2023@gmail.com",
+    "body": "wwww",
+    "created": "2024-10-20T13:49:55.072Z",
+    "update": "2024-10-20T13:49:55.072Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 20,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "s",
+    "created": "2024-10-20T13:50:20.635Z",
+    "update": "2024-10-20T13:50:20.635Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 21,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "w",
+    "created": "2024-10-20T13:51:27.837Z",
+    "update": "2024-10-20T13:51:27.837Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 22,
+  "fields": {
+    "post": 5,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "ssss",
+    "created": "2024-10-20T13:54:40.419Z",
+    "update": "2024-10-20T13:54:40.419Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 23,
+  "fields": {
+    "post": 5,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "Как у вас дешишки",
+    "created": "2024-10-20T13:55:02.500Z",
+    "update": "2024-10-20T13:55:02.500Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.coment",
+  "pk": 24,
+  "fields": {
+    "post": 3,
+    "user": 1,
+    "name": "",
+    "email": "proxaker1111@gmail.com",
+    "body": "цыыыыыыыыы",
+    "created": "2024-10-20T14:29:17.149Z",
+    "update": "2024-10-20T14:29:17.149Z",
+    "active": true
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "developing",
+    "slug": "developing"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "web",
+    "slug": "web"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "django-fraemwork",
+    "slug": "django-fraemwork"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "interesting",
+    "slug": "interesting"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "web-fraemwork",
+    "slug": "web-fraemwork"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "c++",
+    "slug": "c"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "nvidia",
+    "slug": "nvidia"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "python",
+    "slug": "python_1"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 5,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 5,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 7,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 9,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 16,
+  "fields": {
+    "tag": 10,
+    "content_type": 7,
+    "object_id": 7
+  }
+}
+]

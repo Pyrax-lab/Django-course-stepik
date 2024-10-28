@@ -1,0 +1,96 @@
+body{
+    padding: 0px;
+    margin:0px;
+}
+
+.sidebar{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(118, 236, 236);
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+.content{
+    
+    margin-left: 20px;
+    margin-right:20px;
+    background-color: rgb(212, 212, 212);
+}
+
+.content_in{
+    padding-top: 10px;
+    margin-left: 90px;
+    margin-right:90px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content_in > a{
+    text-decoration: none;
+    transition: 0.3s;
+    display:inline-block;
+    
+
+}
+
+.content_in > a:hover{
+    color: rgb(36, 164, 210);
+    font-size: xx-large;
+    
+}
+
+.paginator{
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 20px;
+   
+}
+
+
+.paginator>span{
+    
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(232, 232, 232);
+    
+}
+
+.paginator>a>span{
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 50px; 
+    padding-right: 50px;
+    background-color: rgb(232, 232, 232);
+}
+
+.time{
+    color:#5e5e5e;
+    font-style: italic;
+}
+
+.info_created{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(148, 148, 148);
+    font-style: italic;
+    font-size: small;
+    margin:0px;
+}
+
+.info_user{
+    margin:0px;
+    font-size: x-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.info_body{
+    margin: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tags{
+    color: rgb(15, 187, 187);
+    font-weight: bolder ;
+}
+

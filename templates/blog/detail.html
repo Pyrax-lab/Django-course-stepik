@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% load blog_tags %}
+
+
+{% block content %}
+
+    <div class = "content_in">
+
+    <p>Похожие статья</p>
+    {% for i in similar_posts %}
+        <a href = "{{i.get_absolute_url}}" class="same_posts_a"><p class="same_posts">{{i.title}}</p></a>
+    {% endfor %}
+
+    <h1>{{post_detail.title}}</h1>
+    <p>{{post_detail.created}}</p>
+
+    <p>{{post_detail.body|markdown}}</p>
+
+    </div>
+    
+    <a href = "{% url "blog:post_share" post_detail.id %}">Отправить</a> 
+
+    {% with coments.count as total_coments %}
+    <h2>Всего {{total_coments}} коментариев </h2>
+    {% endwith %}
+
+    {{coments.1}}
+
+
+
+    
+    <form method="POST">
+        {% csrf_token %}
+        <div class = "forms">
+        {{formcoments.as_p}}
+        </div>
+        <p><input type="submit" value="Add comment"></p>
+    </form>
+    
+
+    {% for comment in coments %}
+        <div class="comment">
+            
+            <p class="info_user">{{comment.user}}</p>
+            <p class="info_created">{{ comment.created }}</p>
+            <p class="info_body">{{ comment.body|linebreaks }}</p>
+        </div>
+    {% empty %}
+        <p>Нету коментариев</p>
+    {% endfor %}
+    
+    
+
+{% endblock content %} 
