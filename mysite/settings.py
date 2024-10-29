@@ -142,3 +142,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_REDIRECT_URL  = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+
+
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30 # Устанавливаем время хранения сессионных файлов (cookie) на 30 дней (60 секунд * 60 минут * 24 часа * 30 дней)
