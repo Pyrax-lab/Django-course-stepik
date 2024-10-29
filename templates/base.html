@@ -17,11 +17,12 @@
         <form action="{% url "logout" %}" method="POST">
 
            {% csrf_token %}
-           <button type="submit">Logout</button>
+           <button type="submit">Выйти</button>
 
         </form>
         {% else %}
-            <button><a href="{% url "login" %}">Login</a></button>
+            <button><a href="{% url "login" %}">Войти</a></button>
+            <button><a href="{% url "accounts:signup" %}">Зарегестрироватся</a></button>
         {% endif %}
     </div>
     <div class="content">
