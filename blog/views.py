@@ -93,13 +93,13 @@ def post_detail(request, year, month, day, post):
     if request.method == "POST":
         coments = None
         
-    # if request.method == "POST":
         form = ComentForm(request.POST)
         if form.is_valid():
             coments = form.save(commit = False)
 
             coments.post = post
             coments.user = request.user
+            coments.email = request.user.email
             coments.save()
             
            

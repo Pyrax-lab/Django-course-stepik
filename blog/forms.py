@@ -11,7 +11,7 @@ class EmailForm(forms.Form):
 class ComentForm(forms.ModelForm):
     class Meta:
         model = Coment
-        fields = [ "email", "body"]
+        fields = ["body"]
 
 class SearchForm(forms.Form):
     search = forms.CharField()

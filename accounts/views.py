@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.http import HttpRequest
+from django.http.response import HttpResponse as HttpResponse
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 
 from django.contrib.auth.views import LoginView  # Импортируем стандартное представление LoginView из django.contrib.auth.views
@@ -27,3 +29,35 @@ class SignUpView(generic.CreateView): # Регистрация
     form_class = SignUp
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
+
+
+    def dispatch(self, request, *args, **kwargs) -> HttpResponse:
+        if request.user.is_authenticated:
+            return redirect(to='/')
+        
+        return super(SignUpView, self).dispatch(request, *args, **kwargs)
+    
+
+# class SignUpView(generic.CreateView): , Представление для регистрации, наследуемое от generic.CreateView для упрощенной работы с формами создания.
+#     form_class = SignUpForm , Указывает форму, которая будет использоваться для создания нового пользователя.    
+#     success_url = reverse_lazy("login") , Указывает URL для перенаправления после успешной регистрации. Здесь используется отложенное вычисление URL с помощью `reverse_lazy`.    
+#     initial = None , Начальные данные для формы, принимает словарь значений {'key': 'value'}.    
+#     template_name = 'registration/signup.html' ,  Шаблон, который будет использоваться для отображения страницы регистрации.
+
+#     def dispatch(self, request, *args, **kwargs):,   Метод `dispatch` обрабатывает запрос и направляет его к нужному методу (get, post и т.д.).
+#         if request.user.is_authenticated: , Проверяет, аутентифицирован ли пользователь.
+#             return redirect(to='/') , Если пользователь аутентифицирован, перенаправляет его на главную страницу, чтобы избежать повторной регистрации.
+#         return super(SignUpView, self).dispatch(request, *args, **kwargs) , Если пользователь не авторизован, вызывает метод `dispatch` родительского класса, который обрабатывает запрос дальше.
+
+#     def get(self, request, *args, **kwargs):,  Метод для обработки GET-запроса, вызывается при посещении страницы регистрации.
+#         form = self.form_class(initial=self.initial), Создает экземпляр формы с указанными начальными данными.
+#         return render(request, self.template_name, {'form': form}), Отображает шаблон регистрации с формой на странице.
+
+#     def post(self, request, *args, **kwargs):, метод для обработки POST-запроса, вызывается при отправке данных формы.
+#         form = self.form_class(request.POST) ,Создает экземпляр формы с данными, полученными от пользователя.
+#         if form.is_valid():, Проверяет, валидна ли форма (корректные и обязательные данные).
+#             form.save() , Сохраняет данные формы, создавая нового пользователя.
+#             username = form.cleaned_data.get('username') , Извлекает введенное имя пользователя из очищенных данных формы.
+#             messages.success(request, f'Account created for {username}') , Создает сообщение об успешной регистрации для пользователя.
+#             return redirect(to='login') , Перенаправляет пользователя на страницу логина после успешной регистрации.
+#         return render(request, self.template_name, {'form': form}) ,Если форма не прошла проверку, снова отображает страницу регистрации с формой и ошибками.

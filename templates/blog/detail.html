@@ -25,11 +25,9 @@
     <h2>Всего {{total_coments}} коментариев </h2>
     {% endwith %}
 
-    {{coments.1}}
 
 
-
-    
+    {% if user.is_authenticated %}
     <form method="POST">
         {% csrf_token %}
         <div class = "forms">
@@ -38,6 +36,7 @@
         <p><input type="submit" value="Add comment"></p>
     </form>
     
+    {% endif %}
 
     {% for comment in coments %}
         <div class="comment">
