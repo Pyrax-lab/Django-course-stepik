@@ -4,10 +4,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 
 from django.contrib.auth.views import LoginView  # Импортируем стандартное представление LoginView из django.contrib.auth.views
-from .forms import SignUp, LoginForm
+from .forms import SignUp, LoginForm, UpdateProfileForm, UpdateUserForm
 
 from django.views import generic 
 from django.urls import reverse_lazy
+
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -29,6 +31,10 @@ class SignUpView(generic.CreateView): # Регистрация
     form_class = SignUp
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
+
+
+
+    
 
 
     def dispatch(self, request, *args, **kwargs) -> HttpResponse:
@@ -61,3 +67,27 @@ class SignUpView(generic.CreateView): # Регистрация
 #             messages.success(request, f'Account created for {username}') , Создает сообщение об успешной регистрации для пользователя.
 #             return redirect(to='login') , Перенаправляет пользователя на страницу логина после успешной регистрации.
 #         return render(request, self.template_name, {'form': form}) ,Если форма не прошла проверку, снова отображает страницу регистрации с формой и ошибками.
+
+
+
+
+@login_required
+def profile(request):
+
+
+    if request.method == "POST":
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+        profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+    
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            return redirect(to="user-profile")
+        
+    else:
+        user_form = UpdateProfileForm(instance=request.user)
+        profile_form = UpdateProfileForm(instance=request.user.profile)
+
+
+    return render(request, "registration/profile.html", context={"user_form": user_form, "profile_form": profile_form})

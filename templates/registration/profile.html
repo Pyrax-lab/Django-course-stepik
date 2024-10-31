@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <form method="POST", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{profile_form.image}}
+
+        <p>Имя {{user_form.username}}</p>
+        <p>Емали {{user_form.email}}</p>
+        <p>О себе {{profile_form.bio}}</p>
+
+    </form>
+
+{% endblock content %}
