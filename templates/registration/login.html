@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<a href="{% url 'social:begin' 'github' %}">Log In with GitHub</a>
+
+
 <form method="POST">
 
     {{form.as_p}}

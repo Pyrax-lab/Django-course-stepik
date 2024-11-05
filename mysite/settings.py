@@ -44,8 +44,23 @@ INSTALLED_APPS = [
     "taggit" , # Предворительно установив её через pip install djang-taggit
 
     'django.contrib.postgres', # Нужен для работы postgresql
+
+    'social_django', # Авторизация через социальные сети
+     
     
 ]
+
+# Подключаем аутентификацию 
+AUTHENTICATION_BACKENDS = (
+    {
+        'social_core.backends.github.GithubOAuth2',
+        'social_core.backends.google.GoogleOAuth2',
+    
+        'django.contrib.auth.backends.ModelBackend' # -  это базовая серверная часть аутентификации, которая по умолчанию входит в Django, чтобы позволить пользователям входить в систему по методу имени пользователя/пароля.       
+    }
+
+)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,6 +85,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                 # new code OAuth2 Авторизация
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -150,3 +169,9 @@ LOGOUT_REDIRECT_URL = "/"
 
 
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30 # Устанавливаем время хранения сессионных файлов (cookie) на 30 дней (60 секунд * 60 минут * 24 часа * 30 дней)
+
+
+
+# Аутентификация через социальную сеть
+SOCIAL_AUTH_GITHUB_KEY = 'Ov23lisjpQGnJge3esvI'
+SOCIAL_AUTH_GITHUB_SECRET = '3e8f29d97613a916689b80f8564204fb6058d23b'
