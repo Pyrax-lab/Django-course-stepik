@@ -19,14 +19,14 @@
         **'social_core.backends.github.GithubOAuth2',**
         **'social_core.backends.google.GoogleOAuth2',**
 
-        **'django.contrib.auth.backends.ModelBackend',** <--- вот этот шаблон записываем всегда так как он разрешает авторизовыватся через стандартный пароль 
+        'django.contrib.auth.backends.ModelBackend', <--- вот этот шаблон записываем всегда так как он разрешает авторизовыватся через стандартный пароль 
     ) 
     далее в TEMPLATES -> context_processors добавляем эти 2 строки
                 **'social_django.context_processors.backends',**
                 **'social_django.context_processors.login_redirect',**
 Использованеи: В главном файле urls добавить такой путь **re_path(r'^oauth/', include('social_django.urls', namespace='social')),**
  
- SOCIAL_AUTH_GITHUB_KEY = 'YOUR GITHUB KEY'
-SOCIAL_AUTH_GITHUB_SECRET = 'YOUR GITHUB SECRET KEY'
+**SOCIAL_AUTH_GITHUB_KEY = 'YOUR GITHUB KEY'** сюда нужно передать ключи которые нам выдал гит хаб. Эти ключи относится не к вашему пользователю а именно к вашему приложению так что други люди смогут так же регистрироватся через их ний гит хаб а вам уже будет приходить токен с email username и тд..
+**SOCIAL_AUTH_GITHUB_SECRET = 'YOUR GITHUB SECRET KEY'**
 
-<a href="{% url 'social:begin' 'github' %}">Log In with GitHub</a>
+**<a href="{% url 'social:begin' 'github' %}">Log In with GitHub</a>** непосредственно ссылка для регистрации по GitHub 

@@ -175,3 +175,7 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 30 # Устанавливаем время �
 # Аутентификация через социальную сеть
 SOCIAL_AUTH_GITHUB_KEY = 'Ov23lisjpQGnJge3esvI'
 SOCIAL_AUTH_GITHUB_SECRET = '3e8f29d97613a916689b80f8564204fb6058d23b'
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '117543058022-gpu0rdce7q8fm4ocv7m7amvs4mj0dcmr.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
