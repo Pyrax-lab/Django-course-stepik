@@ -10,6 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+
+# Данный код нужен для того чтобы загружать секретные ключи из файла .env
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@!ag==t%6-p3g2j46xa4630k(+1%snqlc()c6@3x7nl@ylln!n'
+SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -173,9 +181,9 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 30 # Устанавливаем время �
 
 
 # Аутентификация через социальную сеть
-SOCIAL_AUTH_GITHUB_KEY = 'Ov23lisjpQGnJge3esvI'
-SOCIAL_AUTH_GITHUB_SECRET = '3e8f29d97613a916689b80f8564204fb6058d23b'
+SOCIAL_AUTH_GITHUB_KEY = str(os.getenv("GITGUB_KEY"))
+SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv("GITHUB_SECRET"))
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '117543058022-gpu0rdce7q8fm4ocv7m7amvs4mj0dcmr.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = str(os.getenv("GOOGLE_KEY"))
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = str(os.getenv("GOOGLE_SECRET"))
