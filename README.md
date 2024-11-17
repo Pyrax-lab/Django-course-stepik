@@ -85,3 +85,4 @@
 Установка: pip install djangorestframework
 Подключение: settings -> INSTALED_APPS добавляем 'rest_framework 
              потом создаём новую переменную REST_FRAMEWORK = {  "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny",]}
+Использование: 
