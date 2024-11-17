@@ -55,8 +55,18 @@ INSTALLED_APPS = [
 
     'social_django', # Авторизация через социальные сети
      
-    
+    'django_bootstrap5', # Подключаем 5 бутстрап
+
+    'rest_framework', # API  
+
+    'blog_api' # создаем новое приложение где будет хранится всё api нашего сайта
 ]
+
+# REST_FRAMEWORK = {
+#     "DEFAULT_PERMISSION_CLASSES":[
+#         "rest_framework.permission.AllowAny"
+#     ]
+# }
 
 # Подключаем аутентификацию 
 AUTHENTICATION_BACKENDS = (

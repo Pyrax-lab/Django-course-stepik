@@ -25,51 +25,63 @@
                 **'social_django.context_processors.backends',**
                 **'social_django.context_processors.login_redirect',**
 Использованеи: В главном файле urls добавить такой путь **re_path(r'^oauth/', include('social_django.urls', namespace='social')),**
- 
+    
 
---сюда нужно передать ключи которые нам выдал гит хаб. Эти ключи относится не к вашему пользователю а именно к вашему приложению так что други люди смогут так же регистрироватся через их ний гит хаб а вам уже будет приходить токен с email username и тд..--
+    --сюда нужно передать ключи которые нам выдал гит хаб. Эти ключи относится не к вашему пользователю а именно к вашему приложению так что други люди смогут так же регистрироватся через их ний гит хаб а вам уже будет приходить токен с email username и тд..--
 
-###GitGub###
-**SOCIAL_AUTH_GITHUB_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxx'** 
-**SOCIAL_AUTH_GITHUB_SECRET = 'xxxxxxxxxxxxxxxx'**
-**<a href="{% url 'social:begin' 'github' %}">Log In with GitHub</a>** непосредственно ссылка для регистрации по GitHub 
-
-
-###Google###
-**SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'xxxxxxxxxxxxxxxxxxxx'**
-**SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'xxxxxxxxxxxxxxxx'**
-**<br><a href="{% url 'social:begin' 'google-oauth2' %}">Log In with Google</a>**
-
-#Как сохранить секреты в безопасности?#
-Часто при работе над проектом Django у нас есть секретные ключи, ключи OAuth и другая важная информация, которую необходимо хранить в безопасности и конфиденциальности. Вы ни в коем случае не должны раскрывать такие ключи, потому что это делает вашу систему уязвимой для атак безопасности.
-
-Как мы можем прочитать из документации, в основном, что делает python-dotenv, это считывает пары ключ-значение из файла .env и устанавливает их как переменные среды для последующего извлечения.
-
-Папка или файл .env (сокращение от "environment") используется для хранения конфиденциальной информации, такой как ключи API, пароли и другие настройки окружения, которые не должны попадать в систему контроля версий (например, Git)
+    ###GitGub###
+    **SOCIAL_AUTH_GITHUB_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxx'** 
+    **SOCIAL_AUTH_GITHUB_SECRET = 'xxxxxxxxxxxxxxxx'**
+    **<a href="{% url 'social:begin' 'github' %}">Log In with GitHub</a>** непосредственно ссылка для регистрации по GitHub 
 
 
-Устанавливаем модуль 
+    ###Google###
+    **SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'xxxxxxxxxxxxxxxxxxxx'**
+    **SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'xxxxxxxxxxxxxxxx'**
+    **<br><a href="{% url 'social:begin' 'google-oauth2' %}">Log In with Google</a>**
 
-**pip install python-dotenv**
+    ##Как сохранить секреты в безопасности?##
+    Часто при работе над проектом Django у нас есть секретные ключи, ключи OAuth и другая важная информация, которую необходимо хранить в безопасности и конфиденциальности. Вы ни в коем случае не должны раскрывать такие ключи, потому что это делает вашу систему уязвимой для атак безопасности.
 
+    Как мы можем прочитать из документации, в основном, что делает python-dotenv, это считывает пары ключ-значение из файла .env и устанавливает их как переменные среды для последующего извлечения.
 
-Дальше создаем файл с названием .env
-Здесь указавыем Ключь = Значение(пароль)
-
-**SECRET_KEY = 'django-insecure-xxxxxxxxx'**
-
-**GITHUB_KEY = 'xxxxxxxxx'**
-**GITHUB_SECRET = 'xxxxxxxxxxxxxxxxxx'**
-
-**GOOGLE_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'**
-**GOOGLE_SECRET = 'xxxxxxxxxxxxxxxxxx**
-
-В settings добавляем данные код  , он позволяет из файла .env загружать переменные которые хранят в себе ключи 
-from dotenv import load_dotenv
-import os
-load_dotenv()
+    Папка или файл .env (сокращение от "environment") используется для хранения конфиденциальной информации, такой как ключи API, пароли и другие настройки окружения, которые не должны попадать в систему контроля версий (например, Git)
 
 
-чтобы получить значение какого ключа нужно написать его имя в нутри функции getenv() предварительно импортировав библиотеку os
-str(os.getenv("GOOGLE_KEY")) 
+    Устанавливаем модуль 
 
+    **pip install python-dotenv**
+
+
+    Дальше создаем файл с названием .env
+    Здесь указавыем Ключь = Значение(пароль)
+
+    **SECRET_KEY = 'django-insecure-xxxxxxxxx'**
+
+    **GITHUB_KEY = 'xxxxxxxxx'**
+    **GITHUB_SECRET = 'xxxxxxxxxxxxxxxxxx'**
+
+    **GOOGLE_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'**
+    **GOOGLE_SECRET = 'xxxxxxxxxxxxxxxxxx**
+
+    В settings добавляем данные код  , он позволяет из файла .env загружать переменные которые хранят в себе ключи 
+    from dotenv import load_dotenv
+    import os
+    load_dotenv()
+
+
+    чтобы получить значение какого ключа нужно написать его имя в нутри функции getenv() предварительно импортировав библиотеку os
+    str(os.getenv("GOOGLE_KEY")) 
+
+
+
+4. Библиотека по работе с Bootstrap
+Устнаовка: pip install django-bootstrap5
+Подключение: settings -> INSTALED_APPS добавляем 'django-bootstrap5'
+Использованеи: 
+
+
+5. Django REST Framework библиотека для написания API
+Установка: pip install djangorestframework
+Подключение: settings -> INSTALED_APPS добавляем 'rest_framework 
+             потом создаём новую переменную REST_FRAMEWORK = {  "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny",]}
