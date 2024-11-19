@@ -21,7 +21,9 @@ class PostList(APIView):
     def get(self, request):
         return Response({"posts":Post.objects.all().values()})
 
-
+class PostList(generics.ListAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
 # class PostList(generics.ListAPIView):
 #     queryset = Post.objects.all()
 #     serializer_class = PostSerializer
