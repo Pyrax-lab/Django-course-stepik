@@ -30,9 +30,9 @@ class PostSerializer(serializers.Serializer):
         instance.publish = validate_data.get("publish", instance.publish)
 
 
-# 3. 
+# 3. В себе уже использует create update 
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post 
-        fields = ("title", "body", "publish") # "__all__" для того чтобы в поле fields были все данные а не только те которые мы указали
+        fields = ("title", "body", "publish", "auth", "slug") # "__all__" для того чтобы в поле fields были все данные а не только те которые мы указали
