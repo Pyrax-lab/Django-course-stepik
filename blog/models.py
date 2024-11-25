@@ -24,7 +24,7 @@ class Post(models.Model):
     update  = models.DateTimeField(auto_now = True)
     status  = models.BooleanField(blank = True, default = False)
 
-    tags = TaggableManager()
+    tags = TaggableManager() # Чтобы узнать все Тегги которые существуют надо импортирова класс Tag from taggit.models import Tag, Tag.objects.all() = все созданные тегги
 
     class Meta:
         ordering = ["-publish"]

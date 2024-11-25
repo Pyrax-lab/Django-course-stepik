@@ -1,11 +1,25 @@
 from django.urls import path , include
-from .views import PostList,PostUpdate, PostGetUpdateDelete, PostViewsets #, PostDetail
+from .views import PostViewsets, PostViewsetsTags #, PostDetail
 
 
 from rest_framework import routers
-
+# 1. Используем SimpleRouter
 router = routers.SimpleRouter()
-router.register(r"post", PostViewsets, basename="post")
+router.register(r"post", PostViewsetsTags, basename="post")
+# Теперь по адресу http://127.0.0.1:8080/api/post/ 
+# мы сможем получить список всех постов.
+# SimpleRouter создаёт маршруты только для ресурсов, которые мы зарегистрировали.
+
+
+
+# 2. Используем DefaultRouter
+router = routers.DefaultRouter()
+router.register(r"post", PostViewsetsTags, basename="post")
+# Помимо маршрутов для ресурсов, таких как http://127.0.0.1:8080/api/post/, 
+# DefaultRouter также добавляет страницу со схемой API 
+# по адресу http://127.0.0.1:8080/api/.
+# На этой странице отображается описание всех зарегистрированных маршрутов.
+
 
 urlpatterns = [
     # path("<int: pk>/", PostDetail.as_views(), name="post_detail"),
