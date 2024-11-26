@@ -33,6 +33,9 @@ class PostSerializer(serializers.Serializer):
 # 3. В себе уже использует create update 
 
 class PostSerializer(serializers.ModelSerializer):
+
+    auth = serializers.HiddenField(default=serializers.CurrentUserDefault) # заполняет поле auth(прописанное в модели) автоматически текущем пользователём
+
     class Meta:
         model = Post 
         fields = ("title", "body", "publish", "auth", "slug") # "__all__" для того чтобы в поле fields были все данные а не только те которые мы указали

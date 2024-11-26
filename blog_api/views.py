@@ -1,13 +1,14 @@
 from django.shortcuts import render
 
-from rest_framework import generics, viewsets
-# Create your views here.
-from rest_framework.response import Response
+
 from blog.models import Post 
 from .serializers import PostSerializer
 
 from rest_framework.views import APIView # данный класс стоит во главе все классов
 from rest_framework.decorators import action
+from rest_framework import generics, viewsets
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny, IsAdminUser
 
 
 from taggit.models import Tag
@@ -48,21 +49,48 @@ from taggit.models import Tag
 #     serializer_class = PostSerializer
 
 
+# #
+# # 7 ViewSet - заменяет все классы написанные выше и делает тоже саммое только для Viewsets нужны Router 
+# class PostViewsets(viewsets.ModelViewSet):
+#     queryset = Post.objects.all()
+#     serializer_class = PostSerializer
 
-# ViewSet - заменяет все классы написанные выше и делает тоже саммое
-class PostViewsets(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
 
-
-    # переопределение queryset https://www.youtube.com/watch?v=Ur24Ms-MD5k&list=PLA0M1Bcd0w8xZA3Kl1fYmOH_MfLpiYMRs&index=10 13:20
+# #     # переопределение queryset https://www.youtube.com/watch?v=Ur24Ms-MD5k&list=PLA0M1Bcd0w8xZA3Kl1fYmOH_MfLpiYMRs&index=10 13:20
 
     
-# ViewSet + action - создаём api для просмотра тегов
-class PostViewsetsTags(PostViewsets):
+# # 8 ViewSet + action - создаём api для просмотра тегов. Action в основном пишутся только тогда когда есть какоето действие например лайкнуть пост и тд...
+# class PostViewsetsTags(PostViewsets):
 
-    @action(methods=["get"], detail=False) # detail=True значит будет только 1 обьект
-    def tags(self, request, pk=None): # теперь по адрессу http://127.0.0.1:8000/api/post/tags/, !!! имя в url tags = имя нашей функции !!!, теперь по этому адрессу получим все теги
-        tag = Tag.objects.all()
-        print(tag)
-        return Response({'tags': [tg.name for tg in tag]})
+#     @action(methods=["get"], detail=False) # detail=True значит будет только 1 обьект
+#     def tags(self, request, pk=None): # теперь по адрессу http://127.0.0.1:8000/api/post/tags/, !!! имя в url tags = имя нашей функции !!!, теперь по этому адрессу получим все теги
+#         tag = Tag.objects.all()
+#         print(tag)
+#         return Response({'tags': [tg.name for tg in tag]})
+
+
+# 9 Permission - разрешения эти разрешения пишутся permission_classes = [и сюда один из классов перечисленных снизу]
+# AllowAny - полный доступ
+# IsAuthenticared - только для авторизованных пользователей
+# IsAdminUser - только для админов
+# IsAuthenticatedOrReadOnly - Только  для авторизованных или всем но только чтения 
+# пример на обычных классах generics 
+class PostList(generics.ListAPIView): # данный класс позволяет прасматривать список всех постов их может смотреть любой пользователь AllowAny
+    queryset = Post.objects.all() 
+    serializer_class = PostSerializer 
+    permission_classes = [AllowAny, ]
+class PostCreate(generics.CreateAPIView): # позволяет изменять по id обьект только для авторизавыннх пользователей
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly, ]
+from rest_framework import permissions
+
+class IsAdminOrReadOnly(permissions.BasePermission):
+
+    def has_permission(self,request,view):
+        return bool(request.user.is_staff or request.method in ["GET",])
+    
+class PostDelete(generics.RetrieveDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer 
+    permission_classes = [IsAdminOrReadOnly]
