@@ -74,6 +74,11 @@ from taggit.models import Tag
 # IsAuthenticared - только для авторизованных пользователей
 # IsAdminUser - только для админов
 # IsAuthenticatedOrReadOnly - Только  для авторизованных или всем но только чтения 
+from rest_framework import permissions
+class IsAdminOrReadOnly(permissions.BasePermission): # Cвйо класс. Если пользователь админ может удалть в противном случае может только смотерть GET
+    def has_permission(self,request,view): return bool(request.user.is_staff or request.method in ["GET",])
+class IsAuthorOrReadOnly(permissions.BasePermission):
+    def has_object_permission(self, request, view, obj): return bool(obj.user == request.user or request.method in ["GET",])
 # пример на обычных классах generics 
 class PostList(generics.ListAPIView): # данный класс позволяет прасматривать список всех постов их может смотреть любой пользователь AllowAny
     queryset = Post.objects.all() 
@@ -83,14 +88,14 @@ class PostCreate(generics.CreateAPIView): # позволяет изменять 
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticatedOrReadOnly, ]
-from rest_framework import permissions
-
-class IsAdminOrReadOnly(permissions.BasePermission):
-
-    def has_permission(self,request,view):
-        return bool(request.user.is_staff or request.method in ["GET",])
-    
+class PostUpdate(generics.UpdateAPIView): # позволит изменять пост только а втору
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    peermission_classes = [IsAuthorOrReadOnly]
 class PostDelete(generics.RetrieveDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer 
     permission_classes = [IsAdminOrReadOnly]
+
+
+#10 авторизация на основе сесии и cookies
