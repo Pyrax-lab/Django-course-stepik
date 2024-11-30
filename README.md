@@ -86,3 +86,13 @@
 Подключение: settings -> INSTALED_APPS добавляем 'rest_framework 
              потом создаём новую переменную REST_FRAMEWORK = {  "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny",]}
 Использование: 
+
+
+6. Djoser библиотека для api точнее для аутентификации по токенам
+Установка: pip install djoser
+Подключение: settings -> INSTALED_APPS добавляем 'djoser', 'rest_framework.authtoken'
+             blog_api/urls - >  path('post/auth/', include('djoser.urls')),
+             blog_api/urls - > re_path(r'^auth/', include('djoser.urls.authtoken'))
+             settings -> REST_FRAMEWORK = { "DEFAULT_AUTHENTICATION_CLASSES":["rest_framework.authentication.TokenAuthentication",]}
+
+Использование: 

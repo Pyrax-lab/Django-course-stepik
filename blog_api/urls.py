@@ -1,4 +1,4 @@
-from django.urls import path , include
+from django.urls import path , include, re_path
 #from .views import PostViewsets, PostViewsetsTags #, PostDetail
 
 
@@ -41,9 +41,10 @@ from django.urls import path , include
 from .views import PostList,PostCreate, PostDelete
 
 urlpatterns = [
-    path("/post/", PostList.as_view(), name="post_list"),
-    path("/post/auth/", include("rest_framework.urls")), # Добаляет login и logout(почемуто не рабоатет)
-    path("/post/create/", PostCreate.as_view(), name="post_create"),
-    path("/post/<int:pk>/", PostDelete.as_view(), name="post_delete"),
-    #path("post/<int:pk>")
+    path("post/", PostList.as_view(), name="post_list"),
+    path("post/auth/", include("rest_framework.urls")), # Добаляет login и logout(почемуто не рабоатет)
+    path("post/create/", PostCreate.as_view(), name="post_create"),
+    path("post/<int:pk>/", PostDelete.as_view(), name="post_delete"),
+    path('post/auth/', include('djoser.urls')),
+    re_path(r'^auth/', include('djoser.urls.authtoken'))
 ]

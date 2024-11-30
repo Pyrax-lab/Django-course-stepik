@@ -59,14 +59,20 @@ INSTALLED_APPS = [
 
     'rest_framework', # API  
 
-    'blog_api' # создаем новое приложение где будет хранится всё api нашего сайта
+    'blog_api', # создаем новое приложение где будет хранится всё api нашего сайта
+
+    'rest_framework.authtoken', # аутентификация по токенам вместе с djoser
+    'djoser', # аутентификация по токенам
 ]
 
-# REST_FRAMEWORK = {
-#     "DEFAULT_PERMISSION_CLASSES":[
-#         "rest_framework.permission.AllowAny"
-#     ]
-# }
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES":[
+        "rest_framework.permissions.AllowAny"
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+        "rest_framework.authentication.TokenAuthentication",
+    ]
+}
 
 # Подключаем аутентификацию 
 AUTHENTICATION_BACKENDS = (
