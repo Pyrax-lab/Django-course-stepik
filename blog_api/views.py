@@ -43,7 +43,7 @@ from taggit.models import Tag
 #     queryset = Post.objects.all()
 #     serializer_class = PostSerializer
 
-# # 6. Мы можемь создать класс унаследованный от RetrieveUpdateDestroyAPIView которые может получить изменить и удалить !ОДНУ! конкретную запись для неё нужно указать url <int:pk>
+# # 6.RetrieveUpdateDestroyAPIView которые может получить изменить и удалить !ОДНУ! конкретную запись для неё нужно указать url <int:pk>
 # class PostGetUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
 #     queryset = Post.objects.all()
 #     serializer_class = PostSerializer
@@ -77,7 +77,7 @@ from taggit.models import Tag
 from rest_framework import permissions
 class IsAdminOrReadOnly(permissions.BasePermission): # Cвйо класс. Если пользователь админ может удалть в противном случае может только смотерть GET
     def has_permission(self,request,view): return bool(request.user.is_staff or request.method in ["GET",])
-class IsAuthorOrReadOnly(permissions.BasePermission):
+class IsAuthorOrReadOnly(permissions.BasePermission): # Cвой класс проверяет если автор поста то тогда может изменять его если нет смотреть GET
     def has_object_permission(self, request, view, obj): return bool(obj.user == request.user or request.method in ["GET",])
 # пример на обычных классах generics 
 class PostList(generics.ListAPIView): # данный класс позволяет прасматривать список всех постов их может смотреть любой пользователь AllowAny
@@ -98,4 +98,30 @@ class PostDelete(generics.RetrieveDestroyAPIView):
     permission_classes = [IsAdminOrReadOnly]
 
 
-#10 авторизация на основе сесии и cookies
+# 10 авторизация на основе сесии и cookies
+
+
+
+# 11 djoser авторизация на основе токенов 
+
+
+
+# 12 пагинация
+# Эта пагинация ГЛОБАЛЬНАЯ тоесть действует на все запросы
+# в settings -> REST_FRAMEWORK{
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE' : 100, #<- Количество записи на страницу
+# }
+
+from rest_framework.pagination import PageNumberPagination 
+# создаем класс пагинации
+class PostPagination(PageNumberPagination): # этот класс мы должны подключить к тому классу у которого хотим включить пагинацию c помошью pagination_class
+    page_size = 2 # количество записей на страницу
+    page_size_query_param = "page_size" # page_size в url можно указывать сколько хочешь кол-во пагинацию но не более переменной снизу количесвто
+    max_page_size = 10000 # 
+
+class PostList(generics.ListAPIView): # данный класс позволяет прасматривать список всех постов их может смотреть любой пользователь AllowAny класс из 9 модуля
+    queryset = Post.objects.all() 
+    serializer_class = PostSerializer 
+    permission_classes = [AllowAny, ]
+    pagination_class = PostPagination
