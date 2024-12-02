@@ -100,6 +100,8 @@ class PostDelete(generics.RetrieveDestroyAPIView):
 
 # 10 авторизация на основе сесии и cookies
 
+# в urls добавляем путь 
+# path("post/auth", include("rest_framework.urls")) # и все переходя по этоиу адресу "post/auth" появляются 2 url login and logout
 
 
 # 11 djoser авторизация на основе токенов 
