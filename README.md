@@ -2,18 +2,19 @@
 
 
 Что узнал нового из этого курса 
-1) < -Xutf8 manage.py dumpdata --indent=2 --output=mysite_data.json > 
+1) python -X utf8 manage.py dumpdata --indent=2 --output=mysite_data.json - для создать
+2) python -X utf8 manage.py loaddata --indent=2 --output=mysite_data.json - для скачки
 Данная строка позволяет все таблица из бд закинуть в один файл что бывает очень полезно иметь все в одном файле
 
 
-2) Использовалась библиотека django-taggit позволяющия создавать очень легко тегги 
+3) Использовалась библиотека django-taggit позволяющия создавать очень легко тегги 
 Устнаовка:   pip install djang-taggit
 Подключение: в settings -> INSTALLED_APPS -> "taggit" ,  В models подключаем её from taggit.managers import TaggableManager
 Использованеи: В нашей модели используем её **tags = TaggableManager()**
 
 
 
-3) Использование библиотеки social-auth-app-django позволяющаяя регестрироватся через социальные сети
+4) Использование библиотеки social-auth-app-django позволяющаяя регестрироватся через социальные сети
 Установка: pip install social-auth-app-django
 Подключение: в settings -> INSTALLED_APPS -> 'social_django' применяем миграции далее создаём новую перменную **AUTHENTICATION_BACKENDS = (**
         **'social_core.backends.github.GithubOAuth2',**
